@@ -30,4 +30,16 @@ public class CookiesSteps {
 	    assertFalse(input.isDisplayed());
 	    Configuracoes.fechar();
 	}
+	
+	@Dado("clico novamente no botao configuracoes dos cookies")
+	public void clico_novamente_no_botao_configuracoes_dos_cookies() {
+		WebElement input = Configuracoes.browser.findElement(By.cssSelector("button[id='optanon-minimize-button']"));
+		input.click();
+	}
+
+	@Dado("devo ver {string}")
+	public void devo_ver(String string) {
+		
+
+	}
 }
