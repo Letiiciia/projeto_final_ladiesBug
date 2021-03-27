@@ -28,7 +28,7 @@ Funcionalidade: Acessar o site da accenture a mostrar a lista de serviços
       | Technology Consulting        |
       | Technology Innovation        |
       | Zero Based Budgeting (ZBB)   |
-
+	@ignore
   Cenario: Clicar no servico cloud
     Dado que eu estou no site da accenture "https://www.accenture.com/"
     E clico no menu servicos
