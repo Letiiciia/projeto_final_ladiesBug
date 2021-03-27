@@ -27,9 +27,35 @@ public class CarreirasSteps {
 	
 	@Entao("devo ver o destaque em {string}")
 	public void devo_ver_o_destaque_em(String string) throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		WebElement input = Configuracoes.browser.findElement(By.cssSelector("h1[class='area-of-interest-title page-title-long']") );
 		assertEquals(string, input.getText());
+		Configuracoes.fechar();
+	}
+	
+	@Dado("clico no botao de procure por vagas")
+	public void clico_no_botao_de_procure_por_vagas() throws InterruptedException{
+		Thread.sleep(5000);
+		WebElement input = Configuracoes.browser.findElement(By.cssSelector("a[data-analytics-link-name='procure por vagas']"));
+		input.click();
+	}
+
+	@Dado("digito no campo de busca {string}")
+	public void digito_no_campo_de_busca(String string) {
+		WebElement input = Configuracoes.browser.findElement(By.cssSelector("input[id='job-search-hero-bar']"));
+		input.sendKeys(string);
+	}
+
+	@Dado("clico no botao procurar")
+	public void clico_no_botao_procurar() {
+		WebElement input = Configuracoes.browser.findElement(By.cssSelector("button[class='btn-primary col-xs-12']"));
+		input.click();
+	}
+
+	@Entao("devo encontrar vagas para programadores")
+	public void devo_encontrar_vagas_para_programadores() {
+		int resultpesquisa = Configuracoes.browser.findElements(By.cssSelector("div[class='module job-card-wrapper col-md-4 col-xs-12 col-sm-6 corporate-regular background-white']")).size();
+		assertEquals(true, resultpesquisa > 0);
 		Configuracoes.fechar();
 	}
 }
