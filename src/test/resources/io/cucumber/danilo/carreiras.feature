@@ -9,7 +9,7 @@ Funcionalidade: Acessar a lista de carreiras da accenture
     E clico no menu carreiras
     E clico no item do menu vagas em tecnologia
     Entao devo ver o destaque em "Carreiras em tecnologia"
-
+	@ignore
   Cenario: Procurando uma vaga
 		Dado que eu estou no site da accenture "https://www.accenture.com/"
 		E clico no botao configuracao dos cookies

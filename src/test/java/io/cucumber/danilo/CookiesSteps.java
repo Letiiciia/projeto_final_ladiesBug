@@ -2,13 +2,10 @@ package io.cucumber.danilo;
 
 import static org.junit.Assert.assertFalse;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import io.cucumber.danilo.servicos.Configuracoes;
-
 import io.cucumber.java.pt.*;
 
 

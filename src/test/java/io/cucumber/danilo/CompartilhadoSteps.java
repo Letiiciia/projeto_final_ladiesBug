@@ -1,7 +1,8 @@
 package io.cucumber.danilo;
 
-import io.cucumber.java.pt.*;
 import io.cucumber.danilo.servicos.Configuracoes;
+import io.cucumber.java.pt.*;
+
 
 public class CompartilhadoSteps {
 

@@ -9,7 +9,7 @@ import io.cucumber.danilo.servicos.Configuracoes;
 import io.cucumber.java.pt.*;
 
 
-public class sobreAccentureSteps {
+public class SobreAccentureSteps {
 
 	@Dado("clico no menu sobre a accenture")
 	public void clico_no_menu_sobre_a_accenture() throws InterruptedException{
