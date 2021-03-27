@@ -18,7 +18,8 @@ public class CookiesSteps {
 
 	@Dado("aceito os termos LGPD")
 	public void aceito_os_termos_LGPD() {
-	    
+		WebElement input = Configuracoes.browser.findElement(By.cssSelector("button[class='save-preference-btn-handler onetrust-close-btn-handler']"));
+		input.click();		
 	}
 
 	@Entao("deve fechar a caixa de informacao")
