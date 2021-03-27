@@ -1,5 +1,7 @@
 package io.cucumber.danilo;
 
+import static org.junit.Assert.assertFalse;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -24,6 +26,8 @@ public class CookiesSteps {
 
 	@Entao("deve fechar a caixa de informacao")
 	public void deve_fechar_a_caixa_de_informacao() {
-	    
+		WebElement input = Configuracoes.browser.findElement(By.cssSelector("div[id='onetrust-pc-sdk']")); 
+	    assertFalse(input.isDisplayed());
+	    Configuracoes.fechar();
 	}
 }
