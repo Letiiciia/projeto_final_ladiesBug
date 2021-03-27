@@ -2,6 +2,8 @@ package io.cucumber.danilo;
 
 import static org.junit.Assert.assertFalse;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -39,7 +41,8 @@ public class CookiesSteps {
 
 	@Dado("devo ver {string}")
 	public void devo_ver(String string) {
+		/*String items = Configuracoes.browser.findElement(By.cssSelector("ul[class='category-group']")).getText();
 		
-
+		System.out.print("vaga na accenture" + items);	*/	
 	}
 }
