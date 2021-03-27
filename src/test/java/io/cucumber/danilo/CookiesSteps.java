@@ -1,6 +1,7 @@
 package io.cucumber.danilo;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -36,10 +37,17 @@ public class CookiesSteps {
 		input.click();
 	}
 
+	@Entao("devo ver o item de {string}")
+	public void devo_ver_o_item_de(String string) {
+		WebElement input = Configuracoes.browser.findElement(By.cssSelector("#privacy-text"));
+		input.click();	    
+	}
+
 	@Dado("devo ver {string}")
 	public void devo_ver(String string) {
-		/*String items = Configuracoes.browser.findElement(By.cssSelector("ul[class='category-group']")).getText();
-		
-		System.out.print("vaga na accenture" + items);	*/	
+		String items = Configuracoes.browser.findElement(By.cssSelector("ul[class='category-group']")).getText();
+		//assertTrue(string.contains(items.replace("á/í", "a/i")));
+		//Configuracoes.fechar(); 
+		System.out.print("vaga na accenture" + items);
 	}
 }
