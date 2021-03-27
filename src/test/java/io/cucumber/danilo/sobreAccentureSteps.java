@@ -1,9 +1,7 @@
 package io.cucumber.danilo;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import org.hamcrest.core.StringContains;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
