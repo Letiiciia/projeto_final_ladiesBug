@@ -1,5 +1,6 @@
 package io.cucumber.danilo;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -7,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import io.cucumber.danilo.servicos.Configuracoes;
+
 import io.cucumber.java.pt.*;
 
 
@@ -37,17 +39,22 @@ public class CookiesSteps {
 		input.click();
 	}
 
-	@Entao("devo ver o item de {string}")
-	public void devo_ver_o_item_de(String string) {
-		WebElement input = Configuracoes.browser.findElement(By.cssSelector("#privacy-text"));
-		input.click();	    
+	@Entao("devo ver o item {string}")
+	public void devo_ver_o_item(String string) throws InterruptedException{
+		Thread.sleep(5000);
+		String item = Configuracoes.browser.findElement(By.cssSelector("h3[id='privacy-text']")).getText();
+		assertEquals(string, item);	
 	}
 
 	@Dado("devo ver {string}")
 	public void devo_ver(String string) {
 		String items = Configuracoes.browser.findElement(By.cssSelector("ul[class='category-group']")).getText();
-		//assertTrue(string.contains(items.replace("á/í", "a/i")));
-		//Configuracoes.fechar(); 
-		System.out.print("vaga na accenture" + items);
+		String itemsformat = items.replace("í", "i").replace("á", "a");
+		assertTrue(itemsformat.contains(string)); 
+		System.out.print("entrei no if" + string);
+		if(string.equals("Cookies de Publicidade e Redes Sociais")) {
+			System.out.print("entrei no if" + string);
+			Configuracoes.fechar();
+		}
 	}
 }
