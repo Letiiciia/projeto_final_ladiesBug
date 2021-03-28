@@ -51,9 +51,9 @@ public class CookiesSteps {
 		String items = Configuracoes.browser.findElement(By.cssSelector("ul[class='category-group']")).getText();
 		String itemsformat = items.replace("í", "i").replace("á", "a");
 		assertTrue(itemsformat.contains(string)); 
-		System.out.print("entrei no if" + string);
+
 		if(string.equals("Cookies de Publicidade e Redes Sociais")) {
-			System.out.print("entrei no if" + string);
+			
 			Configuracoes.fechar();
 		}
 	}

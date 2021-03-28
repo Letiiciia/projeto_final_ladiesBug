@@ -2,6 +2,8 @@ package io.cucumber.danilo;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -32,15 +34,13 @@ public class ServicosSteps {
 	}
 	
 	@Entao("devo ver os servicos abaixo")
-	public void devo_ver_os_servicos_abaixo(io.cucumber.datatable.DataTable dataTable) {
-	    // Write code here that turns the phrase above into concrete actions
-	    // For automatic transformation, change DataTable to one of
-	    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
-	    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
-	    // Double, Byte, Short, Long, BigInteger or BigDecimal.
-	    //
-	    // For other transformations you can register a DataTableType.
-	    //throw new io.cucumber.java.PendingException();
+	public void devo_ver_os_servicos_abaixo(io.cucumber.datatable.DataTable dataTable) {   
+	    By mySelector = By.xpath("//*[@id=\"primaryLink2_Servios\"]/div/div/ul");
+	    List<WebElement> myElements = Configuracoes.browser.findElements(mySelector);
+	    
+	    for(WebElement e : myElements) {
+	    	System.out.println(e.getText());
+	    	assertTrue(e.contains(string));  	
+	    }
 	}
-
 }
