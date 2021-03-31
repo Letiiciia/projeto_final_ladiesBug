@@ -1,6 +1,7 @@
 # Projeto Final - Ladies' Bug
 Projeto final de automação de testes apresentado a banca Accenture 2.0
-> Status do Projeto: Em desenvolvimento. :warning: 
+<img src="https://github.com/isabelaaug/prova-individual-accenture/blob/master/assets/accenture-gama.PNG" alt="logo">
+> Status do Projeto: Concluído. :heavy_check_mark:  
 
 # Equipe: Ladies' Bug :beetle:
 Integrantes: <br>
@@ -15,7 +16,7 @@ Integrantes: <br>
 </ul>
 
 # Descrição do desafio :page_facing_up:
-### Criar uma aplicação Selenium com os seguintes casos de teste
+### Criar uma aplicação Selenium com os seguintes casos de teste:
 ### - Caso de Teste 1
 Acessar o site da Accenture e aceitar os cookies do LGPD<br>
 
@@ -105,51 +106,46 @@ E clico no item do menu sobre a accenture<br>
 Entao devo ver o topico "Nosso proposito:"<br>
 
 --------------------------------------------------------------------
-## Dependências :gear:
-- Projeto Java configurado para rodar na porta 8080<br>
-Exemplo: http://localhost:8080 <br>
-Link do repositório: https://github.com/Letiiciia/projeto_final_ladiesBug.git<br>
-
---------------------------------------------------------------------
 
 ## Tecnologias utilizadas :books:
 :heavy_check_mark: <b>Java</b><br>
-Linguagem de programação para desenvolvimento da aplicação<br>
+Linguagem de programação utilizada para o desenvolvimento da aplicação<br>
 
 :heavy_check_mark: <b>Maven</b><br>
 Gerenciador de dependências para o Java<br>
 
 :heavy_check_mark: <b>Cucumber</b><br>
-Framework responsável por traduzir uma linguagem humana em código Java<br>
+Framework responsável por traduzir a linguagem humana dos cenários em códigos Java<br>
 
 :heavy_check_mark: <b>Selenium</b><br>
-Framework responsável por fazer a integração do código java com a linguagem Gherkin(Cucumber) abrindo o browser fazendo o teste de comportamento<br>
+Framework responsável por fazer a integração do código Java com a linguagem Gherkin(Cucumber), abrindo um browser e realizando os testes de comportamento<br>
 
 --------------------------------------------------------------------
 ## Como rodar a aplicação :arrow_forward:
+--------------------------------------------------------------------
 ### Pré requisitos :information_source:
-- Instalar o java:
+- Instalar o Java (projeto desenvolvido em Java 8):
 https://www.java.com/pt-BR/download/ie_manual.jsp?locale=pt_BR
-- Instalar jdk
+- Instalar jdk:
 https://www.oracle.com/br/java/technologies/javase/javase-jdk8-downloads.html
-- Verificar se o JAVA_HOME está configurado em seu computador
+- Verificar se o JAVA_HOME está configurado nas variáveis de ambiente do seu sistema
+--------------------------------------------------------------------
 
-
-
-- Clone do projeto
+- Realizando clone do projeto:
  ```bash
-git clone https://github.com/Didox/turma-accenture-java-cucumber.git
+git clone https://github.com/Letiiciia/projeto_final_ladiesBug.git
  ```
 
-- Entrando na pasta do projeto
+- Entrando na pasta do projeto:
  ```bash
-cd turma-accenture-java-cucumber
+cd projeto_final_ladiesBug
  ```
 
-- Configurando selenium em seu computador
-Fazer o download do Chrome Webdriver e colocar o arquivo descompactado dentro da pasta driver na rapiz do projeto:<br>
+- Configurando Selenium:<br>
+
+Fazer o download do Chrome Webdriver (conforme a versão do Google Chrome que possui instalado em seu computador) e colocar o arquivo descompactado dentro da pasta driver na raiz do projeto:<br>
 https://chromedriver.chromium.org/downloads<br>
-
+<br>
 <b>Exemplo:</b><br>
  ```bash
 cd driver
@@ -159,19 +155,24 @@ rm -rf chromedriver_linux64.zip
 cd ../driver
  ```
 
-- Limpando e validando maven Unix
+- Limpando e validando Maven Unix:
  ```bash
 ./mvnw clean
  ```
  
-- Limpando e validando maven Windows
+- Limpando e validando Maven Windows:
  ```bash
 mvnw.cmd clean
  ```
 
-- Executando teste no Unix
+- Executando os testes no Unix:
  ```bash
 ./test.sh
+ ```
+
+- Executando os teste no Windows:
+ ```bash
+test.bat
  ```
 
 - Executando teste no Windows
