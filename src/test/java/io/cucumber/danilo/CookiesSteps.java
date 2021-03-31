@@ -1,5 +1,6 @@
 package io.cucumber.danilo;
 
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -16,27 +17,24 @@ public class CookiesSteps {
 	
 	@Dado("clico no botao configuracao dos cookies")
 	public void clico_no_botao_configuracao_dos_cookies() {
-		WebElement input = Configuracoes.browser.findElement(By.cssSelector(".cookie-setting-link"));
-		input.click();
+		Configuracoes.browser.findElement(By.cssSelector(".cookie-setting-link")).click();
 	}
 
 	@Dado("aceito os termos LGPD")
 	public void aceito_os_termos_LGPD() {
-		WebElement input = Configuracoes.browser.findElement(By.cssSelector("button[class='save-preference-btn-handler onetrust-close-btn-handler']"));
-		input.click();		
+		Configuracoes.browser.findElement(By.cssSelector("button[class='save-preference-btn-handler onetrust-close-btn-handler']")).click();		
 	}
 
 	@Entao("deve fechar a caixa de informacao")
 	public void deve_fechar_a_caixa_de_informacao() {
-		WebElement input = Configuracoes.browser.findElement(By.cssSelector("div[id='onetrust-pc-sdk']")); 
-	    assertFalse(input.isDisplayed());
-	    Configuracoes.fechar();
+		WebElement caixaInfo = Configuracoes.browser.findElement(By.cssSelector("div[id='onetrust-pc-sdk']")); 
+	    	assertFalse(caixaInfo.isDisplayed());
+	    	Configuracoes.fechar();
 	}
 	
 	@Dado("clico novamente no botao configuracoes dos cookies")
 	public void clico_novamente_no_botao_configuracoes_dos_cookies() {
-		WebElement input = Configuracoes.browser.findElement(By.cssSelector("button[id='optanon-minimize-button']"));
-		input.click();
+		Configuracoes.browser.findElement(By.cssSelector("button[id='optanon-minimize-button']")).click();
 	}
 
 	@Entao("devo ver o item {string}")
@@ -53,7 +51,6 @@ public class CookiesSteps {
 		assertTrue(itemsformat.contains(string)); 
 
 		if(string.equals("Cookies de Publicidade e Redes Sociais")) {
-			
 			Configuracoes.fechar();
 		}
 	}
