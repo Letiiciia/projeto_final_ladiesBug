@@ -1,7 +1,7 @@
 #language: pt
 Funcionalidade: Acessar o site da accenture a mostrar a lista de serviços
-	Criando uma rotina de teste para validar o acesso aos serviços e ao cloud
-	@ignore
+  Criando uma rotina de teste para validar o acesso aos serviços e ao cloud
+
   Cenario: Listar servicos da Accenture
     Dado que eu estou no site da accenture "https://www.accenture.com/br-pt"
     E clico no menu servicos
@@ -28,8 +28,8 @@ Funcionalidade: Acessar o site da accenture a mostrar a lista de serviços
       | Technology Consulting        |
       | Technology Innovation        |
       | Zero Based Budgeting (ZBB)   |
-	@ignore
-  Cenario: Clicar no servico cloud
+
+  Cenario: Clicar no servico de cloud
     Dado que eu estou no site da accenture "https://www.accenture.com/br-pt"
     E clico no menu servicos
     E clico no item do menu cloud
