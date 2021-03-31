@@ -14,21 +14,19 @@ import io.cucumber.java.pt.*;
 public class CarreirasSteps {
 	@Dado("clico no menu carreiras")
 	public void clico_no_menu_carreiras() {
-		WebElement input = Configuracoes.browser.findElement(By.cssSelector("div[data-target='#primaryLink4_Carreiras']"));
-		input.click();
+		Configuracoes.browser.findElement(By.cssSelector("div[data-target='#primaryLink4_Carreiras']")).click();
 	}
 
 	@Dado("clico no item do menu vagas em tecnologia")
 	public void clico_no_item_do_menu_vagas_em_tecnologia() throws InterruptedException {
 		Thread.sleep(5000);
-		WebElement input = Configuracoes.browser.findElement(By.cssSelector("#primaryLink4_Carreiras>div>div>ul>li:nth-child(3)>ul>li:nth-child(6)>a"));
-		input.click();	
+		Configuracoes.browser.findElement(By.cssSelector("#primaryLink4_Carreiras>div>div>ul>li:nth-child(3)>ul>li:nth-child(6)>a")).click();	
 	}
 	
 	@Entao("devo ver o destaque em {string}")
 	public void devo_ver_o_destaque_em(String string) throws InterruptedException {
 		Thread.sleep(5000);
-		WebElement input = Configuracoes.browser.findElement(By.cssSelector("h1[class='area-of-interest-title page-title-long']") );
+		WebElement input = Configuracoes.browser.findElement(By.cssSelector("h1[class='area-of-interest-title page-title-long']"));
 		assertEquals(string, input.getText());
 		Configuracoes.fechar();
 	}
@@ -36,8 +34,7 @@ public class CarreirasSteps {
 	@Dado("clico no botao de procure por vagas")
 	public void clico_no_botao_de_procure_por_vagas() throws InterruptedException{
 		Thread.sleep(5000);
-		WebElement input = Configuracoes.browser.findElement(By.cssSelector("a[data-analytics-link-name='procure por vagas']"));
-		input.click();
+		Configuracoes.browser.findElement(By.cssSelector("a[data-analytics-link-name='procure por vagas']")).click();
 	}
 
 	@Dado("digito no campo de busca {string}")
@@ -48,8 +45,7 @@ public class CarreirasSteps {
 
 	@Dado("clico no botao procurar")
 	public void clico_no_botao_procurar() {
-		WebElement input = Configuracoes.browser.findElement(By.cssSelector("button[class='btn-primary col-xs-12']"));
-		input.click();
+		Configuracoes.browser.findElement(By.cssSelector("button[class='btn-primary col-xs-12']")).click();
 	}
 
 	@Entao("devo encontrar vagas para programadores")
