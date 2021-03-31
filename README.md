@@ -174,8 +174,3 @@ mvnw.cmd clean
  ```bash
 test.bat
  ```
-
-- Executando teste no Windows
- ```bash
-test.bat
- ```
