@@ -1,5 +1,6 @@
 # Projeto Final - Ladies' Bug
 Projeto final de automação de testes apresentado a banca Accenture 2.0
+<img src="https://github.com/isabelaaug/prova-individual-accenture/blob/master/assets/accenture-gama.PNG" alt="logo">
 > Status do Projeto: Concluído. :heavy_check_mark:  
 
 # Equipe: Ladies' Bug :beetle:
