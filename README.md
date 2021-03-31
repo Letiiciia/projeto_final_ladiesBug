@@ -133,12 +133,12 @@ https://www.oracle.com/br/java/technologies/javase/javase-jdk8-downloads.html
 
 - Realizando clone do projeto:
  ```bash
-git clone https://github.com/isabelaaug/prova-individual-accenture.git
+git clone https://github.com/Letiiciia/projeto_final_ladiesBug.git
  ```
 
 - Entrando na pasta do projeto:
  ```bash
-cd prova-individual-accenture
+cd projeto_final_ladiesBug
  ```
 
 - Configurando Selenium:<br>
